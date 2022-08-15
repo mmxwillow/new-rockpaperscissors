@@ -3,14 +3,14 @@ const results = document.querySelector('#results');
 const score = document.querySelector('#score');
 const playAgain = document.querySelector('#play-again');
 
-playAgain.style.visibility="hidden";
+playAgain.style.visibility = "hidden";
 
 playAgain.addEventListener('click', () => {
   playerScore = 0;
   computerScore = 0;
   results.textContent = "Pick a shape";
   score.textContent = "";
-  playAgain.style.visibility="hidden";
+  playAgain.style.visibility = "hidden";
 
   buttons.forEach(button => {
     button.disabled = false;
@@ -19,7 +19,7 @@ playAgain.addEventListener('click', () => {
 
 buttons.forEach(button => {
   button.addEventListener('click', () => {
-    results.textContent = playRound(button.textContent, computerPlay());
+    results.textContent = playRound(button.id, computerPlay());
     score.textContent = `You ${playerScore}:${computerScore} Computer`;
     game();
   });
@@ -71,7 +71,7 @@ function game() {
       results.textContent = `You lost! Computer scored ${computerScore}. You scored ${playerScore}.`;
     else results.textContent = `It's a draw! You both scored ${playerScore}.`;
 
-    playAgain.style.visibility="visible";
+    playAgain.style.visibility = "visible";
 
     buttons.forEach(button => {
       button.disabled = true;
@@ -82,5 +82,3 @@ function game() {
 
 let playerScore = 0;
 let computerScore = 0;
-
-//game();
