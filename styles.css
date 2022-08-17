@@ -8,6 +8,8 @@ body{
     color:white;
     text-align: center;
     height: 100vh;
+    margin: 0;
+    padding: 0;
 }
 .btn-group{
     color:white;
@@ -15,8 +17,8 @@ body{
     background:none;
 }
 svg{
-    min-width: 10%;
-    max-width: 60%;
+    min-width: 10vh;
+    max-width: 35vh;
     padding:2em;
     -webkit-filter: drop-shadow( 3px 3px 30px rgb(255, 0, 242));
     filter: drop-shadow( 3px 3px 5px rgb(255, 255, 255));
@@ -35,6 +37,7 @@ svg{
 }
 .container{
     display: flex;
+    justify-content: center;
     max-height: 70vh;
     margin:5em 10em;
 }
@@ -65,11 +68,12 @@ footer{
 }
 @media (max-width: 800px) {
     svg{
-        min-width:10%;
-        max-width: 35%;
+        min-width:10vh;
+        max-width: 15vh;
     }
     .container{
         flex-direction: column;
+        align-items:center;
         margin:3em;
     }
     .results-container{
